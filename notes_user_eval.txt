@@ -1,0 +1,59 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    notes_user_eval.txt                                :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/05/03 16:07:50 by mflury            #+#    #+#              #
+#    Updated: 2023/05/03 16:07:50 by mflury           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+- To confirm whether a user is a member of both the sudo and user42 groups, check their group affiliations:
+
+	- groups <username>
+
+- Create a new user account:
+
+	- Create new users:
+
+		- sudo adduser <username>
+
+	- Check if succesfully done:
+
+		- getent passwd <username>
+
+- Create the evaluating group:
+
+	- sudo addgroup evaluating
+
+- Add user to the group:
+
+	- sudo adduser <username> evaluating
+
+- Additionally, you can add the new user to a specific group:
+
+	- sudo usermod -aG evaluating <username>
+
+- where is the password settings:
+
+	- /etc/pam.d/common-password
+
+	- /etc/login.defs
+
+- Advantages and disadvantages of this password policy:
+
+	+ more difficult and time consumming to brut force.
+	+ hard to guess
+
+	- users may write their password on post-it because it change often and its hard to remember.
+	(- annoying during evals lul)
+
+- Delete a user:
+
+	- sudo userdel -r <user>
+
+- Delete a group:
+
+	- sudo groupdel <group>

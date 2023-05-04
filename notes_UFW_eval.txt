@@ -1,0 +1,24 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    notes_UFW_eval.txt                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/05/03 16:53:45 by mflury            #+#    #+#              #
+#    Updated: 2023/05/03 16:53:45 by mflury           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+- Check UFW status and ports:
+
+	- sudo ufw status
+
+- Add a new rule:
+
+	- sudo ufw allow 8080
+
+- Delete a rule:
+
+	- sudo ufw delete <rule_number>
+

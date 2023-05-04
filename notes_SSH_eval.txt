@@ -1,0 +1,40 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    notes_SSH_eval.txt                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/05/03 16:57:58 by mflury            #+#    #+#              #
+#    Updated: 2023/05/03 16:57:58 by mflury           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+- where is the web serv settings?
+
+	- /etc/lighttpd/lighttpd.conf
+
+- where is the ssh settings?
+
+	- /etc/ssh/sshd_config
+
+- Check SSH status:
+
+		- sudo service ssh status
+	or
+		- systemctl status ssh
+
+- What is SSH?
+
+	- Secure Shell (SSH) is a network protocol that allows you to remotely connect to a computer and send it commands remotely.
+		It is commonly used to access remote servers or computers in a secure and encrypted manner, using an encrypted connection.
+
+	- SSH is widely used to administer remote servers and computers, as well as to transfer files between computers.
+		It is also commonly used to establish a remote connection to a computer in order to run commands and use applications as if you were in front of the computer in question.
+
+	- To use SSH, you need an SSH client on your local computer and an SSH server on the remote computer you want to connect to.
+		There are many available SSH clients and servers for different platforms, including Linux, macOS, and Windows.
+
+- List open SSH ports:
+
+	- sudo nano /etc/ssh/sshd_config

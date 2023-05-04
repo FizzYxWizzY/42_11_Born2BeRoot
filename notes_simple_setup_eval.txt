@@ -1,0 +1,36 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    notes_simple_setup_eval.txt                        :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/05/03 15:38:14 by mflury            #+#    #+#              #
+#    Updated: 2023/05/03 15:38:14 by mflury           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+- Ensure that the machine does not have a graphical environment at launch:
+
+	- Command: ls /usr/bin/*session
+
+		- If no graphical interface is active, your machine should respond with the following output:
+			- /usr/bin/dbus-run-session
+		
+		- If a graphical interface is active, the command ls /usr/bin/*session will display a list of session manager executables.
+
+- Check if UFW (Uncomplicated FireWall) is started:
+
+	- Command: sudo ufw status
+
+- Check if SSH service (Secure Shell) is started:
+
+	- Command: sudo service ssh status
+
+- Check that the OS is Debian or Rocky:
+
+	- ls to find the name of the file, then cat it.
+
+		- ls /etc/*-release
+
+		- cat /etc/lsb-release

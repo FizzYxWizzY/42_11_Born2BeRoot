@@ -1,0 +1,56 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    notes_hostname_partitions_eval.txt                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/05/03 16:32:25 by mflury            #+#    #+#              #
+#    Updated: 2023/05/03 16:32:25 by mflury           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+- Change the hostname:
+
+	- Change hostname:
+
+		- sudo hostnamectl set-hostname <hostname>
+
+		- sudo nano /etc/hosts
+
+			- line 127.0.0.1 change old hostname by the new hostname.
+
+	- Check hostname:
+
+		- hostname
+
+- Restart the system:
+
+	- sudo reboot
+
+- Check partitions:
+
+	- lsblk
+
+- what is LVM?
+
+	- Logical Volume Manager (LVM) is a system for managing disk storage space on Linux systems.
+		It allows you to create logical volumes, which are virtual partitions that can span across multiple physical disks or partitions.
+		This can be useful in a number of situations, such as when you want to create a large logical volume from multiple smaller disks,
+		or when you want to easily resize a volume without having to repartition the disk.
+
+	- Some of the main benefits of using LVM include:
+
+		- The ability to easily resize logical volumes without having to repartition the disk.
+	
+		- The ability to create logical volumes that span across multiple physical disks or partitions,
+			allowing you to use all of your available disk space more efficiently.
+
+		- The ability to easily add or remove physical disks from a volume group without having to reconfigure your disk partitions.
+	
+		- The ability to create snapshot copies of logical volumes, which can be used for backup or testing purposes.
+
+		- LVM is a powerful tool that can be used to manage your disk space in a more flexible and dynamic way.
+			It is widely used on Linux systems and is an important part of many system administrator's toolkit.
+
+	

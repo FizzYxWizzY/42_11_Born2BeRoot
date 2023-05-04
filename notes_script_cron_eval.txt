@@ -1,0 +1,53 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    notes_script_cron_eval.txt                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/05/03 17:04:28 by mflury            #+#    #+#              #
+#    Updated: 2023/05/03 17:04:28 by mflury           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+- where is the script:
+
+	- /usr/local/bin/monitoring.sh
+
+- where is crontab settings?
+
+	- sudo crontab -e
+
+	- sudo systemctl status cron.service
+
+- MariaDB
+
+	- Show database
+	
+		- sudo mariadb
+
+			- SHOW DATABASES;
+
+
+
+- What is cron?
+
+	- Cron is a daemon (a background process) that runs commands or scripts at predefined intervals of time, called "cron times".
+		It is primarily used on Unix and Linux systems to schedule tasks to be run automatically.
+
+	- Cron uses a configuration file called "crontab" that defines the tasks to be run and their frequency of execution.
+		Each line in the crontab corresponds to a task to be run, and contains five fields that define when the task should be run.
+
+	- Each field in the crontab can be defined in different ways:
+
+		- An integer represents an absolute value (for example, to run a task every day at midnight, you would set the first field to 0).
+
+		- An asterisk (*) means that the task should be run at all possible values for that field (for example, to run a task every hour, you would set the second field to *).
+
+		- A list of values separated by commas (e.g. 1,2,3) means that the task should only be run when the field matches one of these values
+			(for example, to run a task every day of the week except Saturday and Sunday, you would set the fifth field to 1-5).
+
+		- A range of values separated by a dash (e.g. 2-5) means that the task should be run when the field matches a value within that range
+			(for example, to run a task every day of the week from Tuesday to Friday, you would set the fifth field to 2-5).
+
+	- You can use the crontab -e command to edit your crontab and add or modify tasks to be run. You can also use the crontab -l command to view the contents of your crontab.

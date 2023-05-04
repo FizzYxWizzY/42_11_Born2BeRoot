@@ -1,0 +1,36 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    notes_sudo_eval.txt                                :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/05/03 16:48:23 by mflury            #+#    #+#              #
+#    Updated: 2023/05/03 16:48:23 by mflury           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+- where to find sudo settings:
+
+		- sudo visudo 
+	or
+		- sudo less /etc/sudoers
+
+- Check if sudo is properly installed:
+
+		- sudo -V
+	or
+		- dpkg -l | grep sudo
+
+- Assign an user to sudo group:
+
+	- sudo usermod -aG sudo <username>
+
+- What is TTY?
+
+	- "TTY" is an acronym for "teletype", which refers to a computer's terminal interface.
+		When using the sudo command, you may see the -t option followed by a TTY number, for example -t 1.
+	
+	- This option allows you to specify which terminal the sudo command should be run on.
+		By default, the sudo command is run on the current terminal (the one you are currently on).
+
